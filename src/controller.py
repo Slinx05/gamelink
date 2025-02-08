@@ -4,6 +4,7 @@ import sys
 from argparse import Namespace
 from itertools import chain
 from typing import TypedDict
+from pathlib import Path
 
 from pydantic import Field, ValidationError
 from pydantic.dataclasses import dataclass
@@ -18,8 +19,12 @@ from .porthandler import run_monitor_broadcasts
 
 logger = setup_logger(__name__)
 
-DEFAULT_GAMES = "resources/lan-games-db/lan-games.csv"
-DEFAULT_CONFIG = "config.json"
+file_abs_path = Path(__file__).absolute()
+parent_dir = file_abs_path.parents[1].parts[-1]
+base_dir = file_abs_path.parents[2] if parent_dir == "_internal" else file_abs_path.parents[1]
+
+DEFAULT_GAMES = base_dir.joinpath("resources/lan-games-db/lan-games.csv")
+DEFAULT_CONFIG = base_dir.joinpath("./config.json")
 OLD_DESTINATION = "255.255.255.255"
 
 
@@ -202,3 +207,7 @@ def cli_sh_games() -> None:
 
 def cli_sh_ports(args: Namespace):
     run_monitor_broadcasts(args.process)
+
+
+if __name__ == "__main__":
+    print(base_dir)
