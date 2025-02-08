@@ -1,0 +1,20 @@
+[project]
+name = "gamelink"
+version = "0.1.0"
+description = "Connects players via different networks"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["psutil>=6.1.1", "pydantic>=2.10.5", "scapy>=2.6.1"]
+
+[dependency-groups]
+dev = [
+    "pillow>=11.1.0",
+    "pyinstaller>=6.11.1",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["T201"]
+
+[tool.ruff]
+line-length = 130

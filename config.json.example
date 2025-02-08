@@ -1,0 +1,12 @@
+{
+    "vpn": {
+        "interface": "PartyLAN Tunnel",
+        "player_ips": [
+            "100.99.128.189",
+            "100.78.131.99"
+        ]
+    },
+    "partylan": {
+        "path": "D:\\partylan"
+    }
+}
