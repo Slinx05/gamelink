@@ -23,6 +23,9 @@ This program needs a third-party library to get access to the network interface.
 > [!NOTE]
 > All players have to configure and run **gamelink**, in order to play together.
 
+> [!IMPORTANT] Correct network interface
+> Make sure your game is using the VPN network interface
+
 1. Copy `config.json.example` to `config.json` and define the following values:
 
     - `interface`: your VPN network interface name
@@ -54,9 +57,6 @@ This program needs a third-party library to get access to the network interface.
     ```
 
 3. Host a lan game and play with you friends
-
-    > [!IMPORTANT] Correct network interface
-    > Make sure your game is using the VPN network interface for communication
 
 ### Useful commands
 
