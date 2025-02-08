@@ -95,7 +95,6 @@ def init_argparse() -> argparse.ArgumentParser:
         "file",
         help="OPTIONAL: specify a custom config file [DEFAULT: config.json]",
         type=str,
-        default="config.json",
         nargs="?",
     )
     # main -> partylan submenu
