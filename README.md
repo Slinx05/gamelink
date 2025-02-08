@@ -5,6 +5,11 @@
 GameLink allows you to play games with an LAN modus over a virtual private network.  
 You will see hosted games and players in the game lobby, like you would see in the same local area network.
 
+## Project Status
+
+> [!WARNING]
+> This project is under development, interfaces and commands may change!
+
 ## Supported Platforms
 
 - Windows 11
